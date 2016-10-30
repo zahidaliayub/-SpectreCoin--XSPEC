@@ -152,11 +152,18 @@ public:
         nRPCPort = 36657;
         nBIP44ID = 0x80000023;
 
-        nLastPOWBlock = 31000;
-        nLastFairLaunchBlock = 120;
+        //nLastPOWBlock = 31000;
+        //nLastFairLaunchBlock = 120;
 
-        nFirstPosv2Block = 453000;
-        nFirstPosv3Block = 783000;
+        //nFirstPosv2Block = 453000;
+        //nFirstPosv3Block = 783000;
+        
+        //Testing purposes outside testnet
+        nLastPOWBlock = 410;
+        nLastFairLaunchBlock = 10;
+
+        nFirstPosv2Block = 110;
+        nFirstPosv3Block = 500;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
