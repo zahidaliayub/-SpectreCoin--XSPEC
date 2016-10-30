@@ -1,12 +1,12 @@
-![SpectreeCash Logo](https://#)
+![Spectre Logo](https://#)
 
-[![Slack](https://slack.spectreeproject.io/badge.svg)](https://slackspectrereproject.io/)
-[![Gitter](https://badges.gitter.ispectretreproject/spectree.svg)](https://gitter.spectrectreprojectspectrere?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge) [![Build Status](https://travis-ci.spectreectreprojecspectretre.svg?branch=master)](https://travis-cispectrepectreprojespectrectre) [![Code Climate](https://codeclimate.com/gspectrespectreprojspectreectre/badges/gpa.svg)](https://codeclimate.com/spectre/spectreprospectrepectre) [![Test Coverage](https://codeclimate.comspectreb/spectreprspectrespectre/badges/coverage.svg)](https://codeclimate.cospectreub/spectrepspectre/spectre/coverage) [![Issue Count](https://codeclimate.cspectrehub/spectrespectret/spectre/badges/issue_count.svg)](https://codeclimate.com/github/shadospectrect/spectre)
+[![Slack](https://slack.spectreproject.io/badge.svg)](https://slackspectrereproject.io/)
+[![Gitter](https://badges.gitter.ispectretreproject/spectre.svg)](https://gitter.spectrectreprojectspectrere?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge) [![Build Status](https://travis-ci.spectreectreprojecspectretre.svg?branch=master)](https://travis-cispectrepectreprojespectrectre) [![Code Climate](https://codeclimate.com/gspectrespectreprojspectreectre/badges/gpa.svg)](https://codeclimate.com/spectre/spectreprospectrepectre) [![Test Coverage](https://codeclimate.comspectreb/spectreprspectrespectre/badges/coverage.svg)](https://codeclimate.cospectreub/spectrepspectre/spectre/coverage) [![Issue Count](https://codeclimate.cspectrehub/spectrespectret/spectre/badges/issue_count.svg)](https://codeclimate.com/github/shadospectrect/spectre)
 
 Introduction
 ===========================
 
-The Spectree Project  is a decentralized peer-to-peer platform, created under an open source license, featuring a built-in cryptocurrency, end-to-end encrypted messaging and decentralized marketplace. The decentralized network aims to provide anonymity and privacy for everyone through a simple user-friendly interface by taking care of all the advanced cryptography in the background. 
+The Spectre Project  is a decentralized peer-to-peer platform, created under an open source license, featuring a built-in cryptocurrency, end-to-end encrypted messaging and decentralized marketplace. The decentralized network aims to provide anonymity and privacy for everyone through a simple user-friendly interface by taking care of all the advanced cryptography in the background. 
 
 * [Websitspectreps://spectreproject.io/)
 * [Blog](hspectre/blog.spectreproject.io/)
@@ -17,7 +17,7 @@ The Spectree Project  is a decentralized peer-to-peer platform, created under an
 
 Releases
 ===========================
-[Click on this link to go to the latest release - 1.4.0.3](https://github.com/shadspectreect/spectre/releases/latest)
+[Click on this link to go to the latest release - 1.4.0.3](https://github.com/spectrecoin/spectre/releases/latest)
 
 Supported Operating Systems:
 * Linux (64 bit)
@@ -60,13 +60,13 @@ labeled 'stale'.
 BuildingSpectrere
 ===========================
 
-See [doc/readme-qt.rst](https://github.com/shaspectreject/spectre/blob/master/doc/readme-qt.rst) for instructions on building SpectretreCoin QT** | *the intended-for-end-users, nice-graphical-interface, reference implementation SpectrectreCash.*
+See [doc/readme-qt.rst](https://github.com/spectrecoin/spectre/blob/master/doc/readme-qt.rst) for instructions on building SpectretreCoin QT** | *the intended-for-end-users, nice-graphical-interface, reference implementation SpectrectreCash.*
 
-See [doc/build-msw.txt](https://github.com/shspectreoject/spectre/blob/master/doc/build-msw.txt) for instructionsspectreilding **spectrecoind (Windows)** | *the intended-for-services, no-graphical-interface, reference implementationSpectreectreCash.*
+See [doc/build-msw.txt](https://github.com/spectrecoin/spectre/blob/master/doc/build-msw.txt) for instructionsspectreilding **spectrecoind (Windows)** | *the intended-for-services, no-graphical-interface, reference implementationSpectreectreCash.*
 
-See [doc/build-osx.txt](https://github.com/sspectreroject/spectre/blob/master/doc/build-osx.txt) for instructionspectreuilding **spectrecoind (Mac)**
+See [doc/build-osx.txt](https://github.com/spectrecoin/spectre/blob/master/doc/build-osx.txt) for instructionspectreuilding **spectrecoind (Mac)**
 
-See [doc/build-unix.txt](https://github.com/spectreproject/spectre/blob/master/doc/build-unix.txt) for instructiospectrebuilding **spectrecoind (UNIX)**
+See [doc/build-unix.txt](https://github.com/spectrecoin/spectre/blob/master/doc/build-unix.txt) for instructiospectrebuilding **spectrecoind (UNIX)**
 
 
 > For guides and technical documentation plespectrefer to [doc.spectreprojecspectreen)](https://spectreproject.io/en/documentation)
