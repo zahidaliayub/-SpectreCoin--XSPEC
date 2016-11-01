@@ -164,7 +164,7 @@ public:
         nLastPOWBlock = 410;
         nLastFairLaunchBlock = 10;
 
-        nFirstPosv2Block = 110;
+        nFirstPosv2Block = 410;
         nFirstPosv3Block = 500;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
