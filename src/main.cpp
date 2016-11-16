@@ -37,10 +37,10 @@ std::map<uint256, CBlockThinIndex*> mapBlockThinIndex;
 std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 
 
-unsigned int nStakeMinAge       = 8 * 60 * 60;      // 8 hours
+unsigned int nStakeMinAge       = 1 * 60 * 60;      // 1 hour
 unsigned int nModifierInterval  = 10 * 60;          // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 120;
+int nCoinbaseMaturity = 283; // Generated Blocks must mature after 288 block (24 hours)
 int nStakeMinConfirmations = 450;
 CBlockIndex* pindexGenesisBlock = NULL;
 
@@ -1889,7 +1889,7 @@ void static PruneOrphanBlocks()
     }
 }
 
-static const int64_t nTargetTimespan = 16 * 60;  // 16 mins
+static const int64_t nTargetTimespan = 24 * 60 * 60;  // 24 hours
 
 
 // ppcoin: find last block index up to pindex
@@ -6530,4 +6530,3 @@ bool SendMessages(CNode* pto, std::vector<CNode*> &vNodesCopy, bool fSendTrickle
 
     return true;
 }
-
