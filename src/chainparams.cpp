@@ -25,7 +25,7 @@ int64_t CChainParams::GetProofOfWorkReward(int nHeight, int64_t nFees) const
     int64_t nSubsidy = 0;
     	
 	if(nHeight == 1)
-		nSubsidy = (NetworkID() == CChainParams::TESTNET ? 100000 : 20000000) * COIN;  // 20Mill Pre-mine on MainNet for ICO
+		nSubsidy = (NetworkID() == CChainParams::TESTNET ? 100000 : 20000000) * COIN;  // 20Mill Pre-mine on MainNet
     
     else if(nHeight <= nLastPOWBlock)
         nSubsidy = 0;
@@ -150,13 +150,15 @@ public:
         nDefaultPort = 37347;
         nRPCPort = 36657;
         nBIP44ID = 0x80000023;
-        
-       // Not the best with empty block, but better than a PoS Sync Server with Master and Private Key Conf. 
-       // Should work fine during ICO distribution since no PoW phase and Chain must move to start PoS.
-        nLastPOWBlock = 10000; 
+       
+        //nLastPOWBlock = 10000;
+		nLastPOWBlock = 55;
 
-        nFirstPosv2Block = 10010; // mere formality, should move to PoSv3 fast after ICO.
-        nFirstPosv3Block = 10011;
+        //nFirstPosv2Block = 10010;
+        //nFirstPosv3Block = 10011;
+		
+		nFirstPosv2Block = 55;
+        nFirstPosv3Block = 60;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
