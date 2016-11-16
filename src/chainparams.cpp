@@ -152,13 +152,13 @@ public:
         nBIP44ID = 0x80000023;
        
         //nLastPOWBlock = 10000;
-		nLastPOWBlock = 55;
+	nLastPOWBlock = 400;
 
         //nFirstPosv2Block = 10010;
         //nFirstPosv3Block = 10011;
 		
-		nFirstPosv2Block = 55;
-        nFirstPosv3Block = 60;
+	nFirstPosv2Block = 400;
+        nFirstPosv3Block = 410;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
