@@ -57,7 +57,8 @@ inline int64_t FutureDriftV2(int64_t nTime) { return nTime + 15; }
 
 inline int64_t FutureDrift(int64_t nTime, int nHeight) { return Params().IsProtocolV2(nHeight) ? FutureDriftV2(nTime) : FutureDriftV1(nTime); }
 
-inline unsigned int GetTargetSpacing(int nHeight) { return Params().IsProtocolV2(nHeight) ? 64 : 60; }
+// Return 300 sec for TargetSpacing for a 1 day (288 blks) interval adjustment in PoSv3.
+inline unsigned int GetTargetSpacing(int nHeight) { return Params().IsProtocolV2(nHeight) ? 64 : 300; }
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
