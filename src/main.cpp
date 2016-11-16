@@ -40,7 +40,7 @@ std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
 unsigned int nStakeMinAge       = 5 * 60;      // 5 min
 unsigned int nModifierInterval  = 10 * 60;          // time to elapse before new modifier is computed
 
-int nCoinbaseMaturity = 283; // Generated Blocks must mature after 288 block (24 hours)
+int nCoinbaseMaturity = 20; // Generated Blocks must mature after 288 block (24 hours)
 int nStakeMinConfirmations = 450;
 CBlockIndex* pindexGenesisBlock = NULL;
 
