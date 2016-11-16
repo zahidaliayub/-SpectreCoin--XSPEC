@@ -23,20 +23,17 @@ int64_t CChainParams::GetProofOfWorkReward(int nHeight, int64_t nFees) const
 {
     // miner's coin base reward
     int64_t nSubsidy = 0;
-
-    if (nHeight <= 0)
+    	
+	if(nHeight == 1)
+		nSubsidy = (NetworkID() == CChainParams::TESTNET ? 100000 : 20000000) * COIN;  // 20Mill Pre-mine on MainNet for ICO
+    
+    else if(nHeight <= nLastPOWBlock)
         nSubsidy = 0;
-    else
-    if (nHeight <= nLastFairLaunchBlock)
-        nSubsidy = 1 * COIN;
-    else
-    if (nHeight <= nLastPOWBlock)
-        nSubsidy = (NetworkID() == CChainParams::TESTNET ? 10000 : 400) * COIN;
 
     if (fDebug && GetBoolArg("-printcreation"))
         LogPrintf("GetProofOfWorkReward() : create=%s nSubsidy=%d\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
 
-    return nSubsidy + nFees;
+    return nSubsidy;
 };
 
 
@@ -153,19 +150,13 @@ public:
         nDefaultPort = 37347;
         nRPCPort = 36657;
         nBIP44ID = 0x80000023;
-
-        //nLastPOWBlock = 31000;
-        //nLastFairLaunchBlock = 120;
-
-        //nFirstPosv2Block = 453000;
-        //nFirstPosv3Block = 783000;
         
-        //Testing purposes outside testnet
-        nLastPOWBlock = 410;
-        nLastFairLaunchBlock = 10;
+       // Not the best with empty block, but better than a PoS Sync Server with Master and Private Key Conf. 
+       // Should work fine during ICO distribution since no PoW phase and Chain must move to start PoS.
+        nLastPOWBlock = 10000; 
 
-        nFirstPosv2Block = 410;
-        nFirstPosv3Block = 500;
+        nFirstPosv2Block = 10010; // mere formality, should move to PoSv3 fast after ICO.
+        nFirstPosv3Block = 10011;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
@@ -222,9 +213,9 @@ public:
         nBIP44ID = 0x80000001;
 
         nLastPOWBlock = 110;
-        nLastFairLaunchBlock = 10;
+        //nLastFairLaunchBlock = 10;
 
-        nFirstPosv2Block = 110;
+        nFirstPosv2Block = 120;
         nFirstPosv3Block = 500;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
