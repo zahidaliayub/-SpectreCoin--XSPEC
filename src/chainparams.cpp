@@ -118,10 +118,10 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = GENESIS_BLOCK_TIME;
 
-        vSeeds.push_back(CDNSSeedData("185.117.75.134",  "185.117.75.134"));
         vSeeds.push_back(CDNSSeedData("node1.spectreproject.io", "node1.spectreproject.io"));
         vSeeds.push_back(CDNSSeedData("node2.spectreproject.io", "node2.spectreproject.io"));
         vSeeds.push_back(CDNSSeedData("node3.spectreproject.io", "node3.spectreproject.io"));
+	vSeeds.push_back(CDNSSeedData("node4.spectreproject.io", "node4.spectreproject.io"));
     }
     virtual const CBlock& GenesisBlock() const { return genesis; }
     virtual const std::vector<CAddress>& FixedSeeds() const {
