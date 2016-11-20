@@ -17,7 +17,7 @@ The Spectre Project  is a decentralized peer-to-peer platform, created under an 
 
 Releases
 ===========================
-[Click on this link to go to the latest release - 1.4.0.3](https://github.com/spectrecoin/spectre/releases/latest)
+[Click on this link to go to the latest release - 1.0.0.0](https://github.com/spectrecoin/spectre/releases/latest)
 
 Supported Operating Systems:
 * Linux (64 bit)
