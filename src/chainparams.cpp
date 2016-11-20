@@ -4,7 +4,6 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "assert.h"
-
 #include "chainparams.h"
 #include "main.h"
 
@@ -105,7 +104,7 @@ static void convertSeeds(std::vector<CAddress> &vSeedsOut, const unsigned int *d
 class CBaseChainParams : public CChainParams {
 public:
     CBaseChainParams() {
-        const char* pszTimestamp = "www.cryptocoinsnews.com/wikileaks-reveal-clinton-campaign-considered-digital-currency-donations/";
+        const char* pszTimestamp = "https://www.cryptocoinsnews.com/encrypted-services-exec-bitcoins-price-history-follows-gartners-hype-cycle/";
         CTransaction txNew;
         txNew.nTime = GENESIS_BLOCK_TIME;
         txNew.vin.resize(1);
@@ -122,7 +121,7 @@ public:
         vSeeds.push_back(CDNSSeedData("node2.spectreproject.io", "node2.spectreproject.io"));
         vSeeds.push_back(CDNSSeedData("node3.spectreproject.io", "node3.spectreproject.io"));
 	vSeeds.push_back(CDNSSeedData("node4.spectreproject.io", "node4.spectreproject.io"));
-    }
+      }
     virtual const CBlock& GenesisBlock() const { return genesis; }
     virtual const std::vector<CAddress>& FixedSeeds() const {
         return vFixedSeeds;
@@ -151,25 +150,21 @@ public:
         nRPCPort = 36657;
         nBIP44ID = 0x80000023;
        
-        //nLastPOWBlock = 10000;
-	nLastPOWBlock = 400;
-
-        //nFirstPosv2Block = 10010;
-        //nFirstPosv3Block = 10011;
+	nLastPOWBlock = 2016; // Running for 1 Week after ICO
 		
-	nFirstPosv2Block = 400;
-        nFirstPosv3Block = 410;
+	nFirstPosv2Block = 2016;
+        nFirstPosv3Block = 2020;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
         bnProofOfStakeLimitV2 = CBigNum(~uint256(0) >> 48);
 
         genesis.nBits    = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce   = 904848;
-     
-        hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000001e459b15293dd07147db730af74aed44e3ba2cd4bbfd79d147281542a4e"));
-        assert(genesis.hashMerkleRoot == uint256("0xc61c42d78f70cdf95801abe241bbbba4cda36f7645ad3fb9eb6093b547de9d57"));
+        genesis.nNonce   = 715015;
+
+        hashGenesisBlock = genesis.GetHash();		
+	assert(hashGenesisBlock == uint256("0x000001fd6111f0d71d90b7d8c827c6028dbc867f6c527d90794a0d22f68fecd4"));
+        assert(genesis.hashMerkleRoot == uint256("0x48d79d88cdf7d5c84dbb2ffb4fcaab253cebe040a4e7b46cdd507fbb93623e3f"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(63).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(136).convert_to_container<std::vector<unsigned char> >();
@@ -215,9 +210,8 @@ public:
         nBIP44ID = 0x80000001;
 
         nLastPOWBlock = 110;
-        //nLastFairLaunchBlock = 10;
 
-        nFirstPosv2Block = 120;
+        nFirstPosv2Block = 110;
         nFirstPosv3Block = 500;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
@@ -225,10 +219,10 @@ public:
         bnProofOfStakeLimitV2 = CBigNum(~uint256(0) >> 16);
 
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 19508;
-      
+        genesis.nNonce = 52419;
+		
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00001353c955d1277d4baf0d6c96aee0977fa7177df340771e01b8e07c32106a"));
+        assert(hashGenesisBlock == uint256("0x00004351133a2c6c1f7277b0d684192b605bc62c03727bba81e4d20863944049"));
 
         base58Prefixes[PUBKEY_ADDRESS]      = list_of(127).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SCRIPT_ADDRESS]      = list_of(196).convert_to_container<std::vector<unsigned char> >();
@@ -266,13 +260,14 @@ public:
         pchMessageStart[2] = 0x04;
         pchMessageStart[3] = 0x3a;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 1);
-        genesis.nTime = 1476954000;
+        genesis.nTime = 1479594600;
         genesis.nBits  = bnProofOfWorkLimit.GetCompact();
-        genesis.nNonce = 4;        
+        genesis.nNonce = 2;        
+		
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 18444;
 
-        assert(hashGenesisBlock == uint256("0x3d525086f7a8264e3f23ced3c280e11c46b01e0cfb1832f56b7ace9ce3df565d"));
+        assert(hashGenesisBlock == uint256("0x562dba63b74b056329585b9779306f3d3caf447b5df40fb088cebbfb31fd5d5d"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
     }
