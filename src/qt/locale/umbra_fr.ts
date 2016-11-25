@@ -16,10 +16,12 @@
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
+Copyright © 2014 The ShadowCoin developers
 Copyright © 2016 The Spectre developers</source>
         <translation>Copyright © 2009-2014 Les développeurs Bitcoin
 Copyright © 2012-2014 Les développeurs NovaCoin
-Copyright © 2014-2015 Les développeurs SpectreCoin</translation>
+Copyright © 2014-2015 Les développeurs ShadowCoin
+Copyright © 2016 Les développeurs SpectreCoin</translation>
     </message>
     <message>
         <location line="+16"/>
