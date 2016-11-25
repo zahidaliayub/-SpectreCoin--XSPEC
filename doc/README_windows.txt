@@ -1,6 +1,7 @@
 SpectreCoin
 
-Copyright (c) 2014 SpectreCoin Developers
+Copyright (c) 2016 SpectreCoin Developers
+Copyright (c) 2014 The ShadowCoin developers
 Copyright (c) 2014 BlackCoin Developers
 Copyright (c) 2013 NovaCoin Developers
 Copyright (c) 2011-2013 PPCoin Developers
@@ -15,6 +16,6 @@ Intro
 -----
 SpectreCoin is a free open source project derived from Bitcoin, with
 the goal of providing a long-term energy-efficient scrypt-based crypto-currency.
-Built on the foundation of Bitcoin, PPCoin, NovaCoin and BlackCoin, innovations such as proof-of-stake
+Built on the foundation of Bitcoin, PPCoin, NovaCoin, BlackCoin and Shadowcash, innovations such as proof-of-stake
 help further advance the field of crypto-currency.
 
