@@ -16,9 +16,11 @@
         <source>Copyright © 2009-2014 The Bitcoin developers
 Copyright © 2012-2014 The NovaCoin developers
 Copyright © 2014 The BlackCoin developers
+Copyright © 2014 The ShadowCoin developers
 Copyright © 2016 The Spectre developers</source>
         <translation>Copyright © 2009-2014 De Bitcoin ontwikkelaars
 Copyright © 2012-2014 De NovaCoin ontwikkelaars
+Copyright © 2014 The ShadowCoin ontwikkelaars
 Copyright © 2014-2016 De SpectreCoin ontwikkelaars</translation>
     </message>
     <message>
