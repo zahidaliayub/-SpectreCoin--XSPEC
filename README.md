@@ -1,7 +1,6 @@
 ![Spectre Logo](http://i.imgur.com/hN9x9XA.png)
 
 [![Slack](https://slack.spectreproject.io)](https://slackspectrereproject.io/)
-[![Gitter](https://badges.gitter.ispectretreproject/spectre.svg)](https://gitter.spectrectreprojectspectrere?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge) [![Build Status](https://travis-ci.spectreectreprojecspectretre.svg?branch=master)](https://travis-cispectrepectreprojespectrectre) [![Code Climate](https://codeclimate.com/gspectrespectreprojspectreectre/badges/gpa.svg)](https://codeclimate.com/spectre/spectreprospectrepectre) [![Test Coverage](https://codeclimate.comspectreb/spectreprspectrespectre/badges/coverage.svg)](https://codeclimate.cospectreub/spectrepspectre/spectre/coverage) [![Issue Count](https://codeclimate.cspectrehub/spectrespectret/spectre/badges/issue_count.svg)](https://codeclimate.com/github/shadospectrect/spectre)
 
 Introduction
 ===========================
