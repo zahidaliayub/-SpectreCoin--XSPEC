@@ -1,6 +1,6 @@
 ![Spectre Logo](http://i.imgur.com/Hr8AQq0.png)
 
-[![Slack](https://slack.spectreproject.io)](http://i.imgur.com/65pcfxh.png)
+[![Slack](http://i.imgur.com/65pcfxh.png)](https://slack.spectreproject.io)
 
 Introduction
 ===========================
