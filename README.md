@@ -4,8 +4,9 @@
 
 Introduction
 ===========================
+The Spectreproject comprises the anonymous cryptocurrency Spectrecoin [SPEC] and and the anonymous peer-2-peer payment / money transfer network Spectre.Cash that is currently being developed. This can be thought of as an alternative small remittance system using SPEC as a settlement currency.
 
-The Spectre Project  is a decentralized peer-to-peer platform, created under an open source license, featuring a built-in cryptocurrency, end-to-end encrypted messaging and decentralized marketplace. The decentralized network aims to provide anonymity and privacy for everyone through a simple user-friendly interface by taking care of all the advanced cryptography in the background. 
+Spectrecoin is based on the code base of Shadowcash
 
 * [Websitspectreps://spectreproject.io/)
 * [Blog](hspectre/blog.spectreproject.io/)
@@ -17,16 +18,7 @@ The Spectre Project  is a decentralized peer-to-peer platform, created under an 
 Releases
 ===========================
 [Click on this link to go to the latest release - 1.0.0.0](https://github.com/spectrecoin/spectre/releases/latest)
-
-Supported Operating Systems:
-* Linux (64 bit)
-* ~~Linux (32 bit)~~
-* Windows (32 bit)
-* Windows (64 bit)
-* OSX 
-
-
-Linux releases will not work out of the box on the Raspberry Pi, you'll have to compile from source.
+Spectrecoin is currently in a beta release for distribution.
 
 Development process
 ===========================
