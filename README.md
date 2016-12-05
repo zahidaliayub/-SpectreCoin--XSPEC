@@ -24,3 +24,8 @@ Dual key stealth addresses
 Full decentralization
 
 Based on the Shadowcash code base
+
+LINKS
+https://bitcointalk.org/index.php?topic=1704473.0
+https://spectreproject.io/
+https://blog.spectreproject.io/
