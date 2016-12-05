@@ -26,6 +26,6 @@ Full decentralization
 Based on the Shadowcash code base
 
 LINKS
-https://bitcointalk.org/index.php?topic=1704473.0
-https://spectreproject.io/
-https://blog.spectreproject.io/
+* [Official Website](https://spectreproject.io/)
+* [Official Blog](https://blog.spectreproject.io/)
+* [Bitcointalk Forum](https://bitcointalk.org/index.php?topic=1704473.0)
