@@ -150,10 +150,10 @@ public:
         nRPCPort = 36657;
         nBIP44ID = 0x80000023;
        
-	nLastPOWBlock = 2016; // Running for 1 Week after ICO
+	nLastPOWBlock = 17001;
 		
-	nFirstPosv2Block = 2016;
-        nFirstPosv3Block = 2020;
+	nFirstPosv2Block = 17001;
+        nFirstPosv3Block = 17010;
 
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20); // "standard" scrypt target limit for proof of work, results with 0,000244140625 proof-of-work difficulty
         bnProofOfStakeLimit = CBigNum(~uint256(0) >> 20);
