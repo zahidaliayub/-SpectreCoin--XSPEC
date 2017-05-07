@@ -1,0 +1,1 @@
+echo "dist windows32"
