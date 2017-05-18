@@ -1,63 +1,63 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("2") do |config|
-    config.vm.box_check_update = false
+require "yaml"
 
-    config.vm.synced_folder ".", "/vagrant"
+begin
+    vagrant_config_filename = "Vagrantfile.config.yml"
+    vagrant_config = YAML.load_file("#{vagrant_config_filename}")
+rescue
+    puts "ERROR: Unable to read #{vagrant_config_filename} (#{$!})"
+    exit 1
+end
 
-    _script_prefix = "./scripts/ci"
-    _script_names = ["bootstrap", "build", "check", "dist"]
-    # _target_platforms = ["macos", "ubuntu32", ...]
+Vagrant.configure("#{vagrant_config["version"]}") do |config|
+    vagrant_config["vms"].each do |vm|
+        vm_name = "#{vm["name"]}"
+        vm_box = "#{vm["box"]}"
+        vm_box_version = "#{vm["box_version"]}"
+        vm_os_type = "#{vm["os_type"]}"
 
-    config.vm.define "macos", autostart: false do |macos|
-        macos.vm.box = "busybox-macos-v10.12.4"
-        macos.vm.hostname = "macos"
+        vm_root_dir_prefix = ""
+        vm_shell_script_cmd = "bash"
+        vm_shell_script_extension = "sh"
+        if vm_os_type.eql? "windows" then
+            vm_root_dir_prefix = "C:"
+            vm_shell_script_cmd = "powershell"
+            vm_shell_script_extension = "ps1"
+        end
 
-        _script_names.each { |script|
-            macos.vm.provision "#{script}", type: "shell", run: "never", privileged: false,
-                path: "#{_script_prefix}/macos/#{script}.sh"
-        }
-    end
+        config.vm.define "#{vm_name}", autostart: false do |machine|
+            machine.vm.box = "#{vm_box}"
+            machine.vm.box_version = "#{vm_box_version}"
+            machine.vm.box_check_update = false
 
-    config.vm.define "ubuntu32", autostart: false do |ubuntu32|
-        ubuntu32.vm.box = "busybox-ubuntu-v16.04.0-x86_64"
-        ubuntu32.vm.hostname = "ubuntu32"
+            machine_build_dir = "/tmp/ProjectRoot/build"
+            machine_source_dir = "/tmp/ProjectRoot/source"
+            machine_provisioners = ["bootstrap", "build", "check", "deploy"]
 
-        _script_names.each { |script|
-            ubuntu32.vm.provision "#{script}", type: "shell", run: "never", privileged: false,
-                path: "#{_script_prefix}/ubuntu32/#{script}.sh"
-        }
-    end
+            machine.vm.provision "upload_files", type: "file",
+                source: ".",
+                destination: "#{machine_source_dir}"
 
-    config.vm.define "ubuntu64", autostart: false do |ubuntu64|
-        ubuntu64.vm.box = "busybox-ubuntu-v16.04.0-x86_64"
-        ubuntu64.vm.hostname = "ubuntu64"
+            machine_provisioners.each do |provisioner|
+                provisioner_script = "cd \"$VAGRANT_SOURCE_DIR\" && bash \"$1\""
+                if vm_os_type.eql? "windows" then
+                    provisioner_script = "cd \"$env:VAGRANT_SOURCE_DIR\"; powershell \"$args\""
+                end
 
-        _script_names.each { |script|
-            ubuntu64.vm.provision "#{script}", type: "shell", run: "never", privileged: false,
-                path: "#{_script_prefix}/ubuntu64/#{script}.sh"
-        }
-    end
+                machine.vm.provision "#{provisioner}", type: "shell", privileged: true,
+                    env: {
+                        "VAGRANT_ENVIRONMENT" => true,
+                        "VAGRANT_BUILD_DIR" => "#{vm_root_dir_prefix}#{machine_build_dir}",
+                        "VAGRANT_SOURCE_DIR" => "#{vm_root_dir_prefix}#{machine_source_dir}"
+                    },
+                    args: "./scripts/ci/#{vm_name}/#{provisioner}.#{vm_shell_script_extension}",
+                    inline: provisioner_script
+            end
 
-    config.vm.define "windows32", autostart: false do |windows32|
-        windows32.vm.box = "busybox-windows-v10.0.10240-x86_64"
-        windows32.vm.hostname = "windows32"
-
-        _script_names.each { |script|
-            windows32.vm.provision "#{script}", type: "shell", run: "never", privileged: false,
-                path: "#{_script_prefix}/windows32/#{script}.ps1"
-        }
-    end
-
-    config.vm.define "windows64", autostart: false do |windows64|
-        windows64.vm.box = "busybox-windows-v10.0.10240-x86_64"
-        windows64.vm.hostname = "windows64"
-
-       _script_names.each { |script|
-           windows64.vm.provision "#{script}", type: "shell", run: "never", privileged: false,
-               path: "#{_script_prefix}/windows64/#{script}.ps1"
-       }
+            machine.vm.synced_folder ".", "/vagrant", disabled: true
+        end
     end
 
     config.vm.provider "virtualbox" do |virtualbox|

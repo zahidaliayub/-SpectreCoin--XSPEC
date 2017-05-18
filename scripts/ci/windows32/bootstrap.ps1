@@ -1,1 +1,0 @@
-echo "bootstrap windows32"
