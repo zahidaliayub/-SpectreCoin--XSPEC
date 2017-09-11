@@ -1,14 +1,11 @@
 TEMPLATE = app
 TARGET = spectre
-VERSION = 1.3.0
+VERSION = 1.4.0
 INCLUDEPATH += src src/json src/qt src/tor
 DEFINES += BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
-
-greaterThan(QT_MAJOR_VERSION, 4) {
-    DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
-}
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
 
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
@@ -25,7 +22,7 @@ MOC_DIR = build
 UI_DIR = build
 RESOURCES = spectre.qrc
 
-QT += webkit network
+QT += network
 
 build_macosx64 {
     QMAKE_TARGET_BUNDLE_PREFIX = co.spectrecoin
