@@ -22,7 +22,7 @@ MOC_DIR = build
 UI_DIR = build
 RESOURCES = spectre.qrc
 
-QT += network
+QT += network widgets
 
 build_macosx64 {
     QMAKE_TARGET_BUNDLE_PREFIX = co.spectrecoin

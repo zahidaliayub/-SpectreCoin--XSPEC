@@ -37,7 +37,6 @@
 
 #include <QApplication>
 #include <QThread>
-#include <QWebFrame>
 #include <QClipboard>
 #include <QMessageBox>
 #include <QSortFilterProxyModel>
@@ -1172,8 +1171,6 @@ QVariantMap SpectreBridge::userAction(QVariantMap action)
         window->changePassphrase();
     if(key == "toggleLock")
         window->toggleLock();
-    if(key == "developerConsole")
-        window->webView->page()->triggerAction(QWebPage::InspectElement);
     if(key == "aboutClicked")
         window->aboutClicked();
     if(key == "aboutQtClicked")
